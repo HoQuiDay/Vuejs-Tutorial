@@ -12,7 +12,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .topnav {
   overflow: hidden;
   background-color: #333;

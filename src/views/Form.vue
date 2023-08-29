@@ -1,9 +1,7 @@
-<template>
-  <h1>Form dang ky</h1>
-</template>
+<template></template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style></style>

@@ -1,1 +1,18 @@
-@import './base.css';
+:root {
+  --primary: #ffce00;
+  --sencondary: #fe4880;
+  --dark: #212121;
+  --light: #f3f3f3;
+  /* --font: 'Odibee Sans', cursive; */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  width: 100%;
+}
