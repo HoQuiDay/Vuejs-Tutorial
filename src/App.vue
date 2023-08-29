@@ -1,6 +1,8 @@
 <template>
-  <div id="app"><TheHeader /></div>
-  <router-view />
+  <div id="app">
+    <TheHeader />
+    <router-view />
+  </div>
 </template>
 
 <script setup>

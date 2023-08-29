@@ -6,16 +6,13 @@
     <router-link to="about">About</router-link>
   </div>
 </template>
-<script>
-export default {
-  name: 'TheHeader'
-};
-</script>
+<script setup></script>
 
-<style scoped>
+<style>
 .topnav {
-  overflow: hidden;
   background-color: #333;
+  width: 100%;
+  height: 50px;
 }
 
 .topnav a {

@@ -3,7 +3,7 @@
   --sencondary: #fe4880;
   --dark: #212121;
   --light: #f3f3f3;
-  /* --font: 'Odibee Sans', cursive; */
+  --font: 'Odibee Sans', cursive;
 }
 
 * {
@@ -15,4 +15,6 @@
 body {
   font-size: 16px;
   width: 100%;
+  background: var(--dark);
+  color: var(--light);
 }

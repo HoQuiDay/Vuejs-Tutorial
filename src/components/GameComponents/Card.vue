@@ -1,12 +1,23 @@
 <template>
-  <div class="card" :class="{ disable: isDisable }">
+  <div
+    class="card"
+    :class="{ disable: isDisable }"
+    :style="{
+      width: width + 'px',
+      height: height + 'px',
+      perspective: width * 2
+    }"
+  >
     <div
       class="card__inner"
       :class="{ 'is-flipped': isFlipped }"
       @click="onToggleFlipCard"
     >
       <div class="card__face card__face--front">
-        <div class="card__content"></div>
+        <div
+          class="card__content"
+          :style="{ backgroundSize: `${width / 3}px ${width / 3}px` }"
+        ></div>
       </div>
 
       <div class="card__face card__face--back">
@@ -23,7 +34,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
 const isFlipped = ref(false)
 const isDisable = ref(false)
@@ -37,7 +48,9 @@ const props = defineProps({
   imgBackFaceUrl: {
     type: String,
     required: true
-  }
+  },
+  width: Number,
+  height: Number
 })
 
 function onToggleFlipCard() {
@@ -62,8 +75,6 @@ defineExpose({
   display: inline-block;
   margin-right: 1rem;
   margin-bottom: 1rem;
-  width: 90px;
-  height: 120px;
 }
 
 .card__inner {
@@ -94,7 +105,6 @@ defineExpose({
 .card__face--front .card__content {
   /* nen theo link va ko lap , can giua doc va ngang */
   background: url(../../assets/images/icon_back.png) no-repeat center center;
-  background-size: 50px 50px;
   height: 100%;
   width: 100%;
 }
